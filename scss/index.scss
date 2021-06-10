@@ -1,0 +1,38 @@
+@import './common';
+
+div {
+	color: $colorDark;
+	@include flex;
+}
+
+.wrapper {
+	max-width: $w-lg;
+	margin: auto;
+	border: 10px solid red;
+	@include flex($CT);
+	@include LG {
+		border-color: 10px solid blue;
+	}
+	@include MD {
+		border-color: 10px solid magenta;
+	}
+	@include SM {
+		border-color: 10px solid #05812a;
+	}
+	.box {
+		width: 33.3333%;
+		height: 100px;
+		border: 10px solid blue;
+		@include MD {
+			width: 50%;
+		}
+		@include SM {
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
